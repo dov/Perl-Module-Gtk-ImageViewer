@@ -1,0 +1,17 @@
+AUTHORS
+ChangeLog
+GtkImageViewer.xs
+ImageViewer.pm
+LICENSE
+MANIFEST
+MANIFEST.SKIP
+META.yml
+Makefile.PL
+README
+TODO
+gtkimageviewerperl.h
+maps
+samples/simple.pl
+samples/scrolled-window
+samples/cat.jpg
+t/01.t

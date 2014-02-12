@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+
+######################################################################
+#  Example of howto embed the gtkimageviewer in a scrolled window.
+#
+#  Dov Grobgeld <dov.grobgeld@gmail.com>
+#  Friday 2009-06-12 14:19 
+#
+#  This program is in the public domain
+######################################################################
+
+use Gtk2::ImageViewer;
+
+Gtk2->init;
+
+$window = Gtk2::Window->new();
+$window->signal_connect(destroy=>sub{exit});
+
+$scrolled_win = Gtk2::ScrolledWindow->new();
+$scrolled_win->set_policy("automatic", "automatic");
+$window->add($scrolled_win);
+
+$imgv = new_from_file Gtk2::ImageViewer(shift||"cat.jpg");
+$scrolled_win->add($imgv);
+$window->show_all();
+
+main Gtk2;
